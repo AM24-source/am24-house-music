@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AM24 HOUSE MUSIC | Official Music & Production</title>
+
+<meta name="description"
+content="AM24 HOUSE MUSIC — Original music, beats, production and professional music services by AM24.">
+
+<meta name="keywords"
+content="AM24, AM24 House Music, Deep House, Drill, Reggaeton, Beats, Music Production">
+
+<meta name="author" content="AM24 HOUSE MUSIC">
+
+<style>
+
+/* =========================================================
+   AM24 HOUSE MUSIC
+   SINGLE FILE WEBSITE
+   ========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --bg:#050505;
+    --bg2:#0b0b0b;
+    --card:#111111;
+    --card2:#151515;
+    --text:#ffffff;
+    --muted:#9a9a9a;
+    --line:#242424;
+    --accent:#ffffff;
+    --green:#1ed760;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+/* =========================
+   LOADING SCREEN
+   ========================= */
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:.6s;
+}
+
+.loader-logo{
+    font-size:38px;
+    font-weight:900;
+    letter-spacing:6px;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{opacity:.35}
+    50%{opacity:1}
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:75px;
+    background:rgba(5,5,5,.85);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 6%;
+    z-index:1000;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:3px;
+}
+
+.logo span{
+    color:#777;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#ccc;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#fff;
+}
+
+.menu{
+    display:none;
+    font-size:27px;
+    cursor:pointer;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    padding:100px 20px 60px;
+    background:
+        radial-gradient(circle at 50% 35%,#242424 0%,#090909 35%,#000 75%);
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+    animation:rotate 20s linear infinite;
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    width:800px;
+    height:800px;
+    border:1px solid rgba(255,255,255,.04);
+    border-radius:50%;
+}
+
+@keyframes rotate{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+}
+
+.hero-small{
+    font-size:13px;
+    letter-spacing:6px;
+    color:#aaa;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(55px,10vw,125px);
+    line-height:.9;
+    letter-spacing:-6px;
+    font-weight:1000;
+}
+
+.hero h1 span{
+    display:block;
+    color:#777;
+}
+
+.hero p{
+    margin:30px auto;
+    max-width:600px;
+    color:#aaa;
+    font-size:17px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 28px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+    display:inline-block;
+}
+
+.btn-white{
+    background:#fff;
+    color:#000;
+}
+
+.btn-dark{
+    border:1px solid #444;
+    color:#fff;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+section{
+    padding:110px 7%;
+}
+
+.section-title{
+    margin-bottom:50px;
+}
+
+.section-label{
+    font-size:12px;
+    letter-spacing:5px;
+    color:#777;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    font-size:clamp(35px,5vw,60px);
+    margin-top:8px;
+    letter-spacing:-2px;
+}
+
+.section-title p{
+    color:#777;
+    max-width:600px;
+    margin-top:10px;
+}
+
+/* =========================
+   FEATURED MUSIC
+   ========================= */
+
+.featured{
+    background:#080808;
+}
+
+.spotify-box{
+    max-width:950px;
+    margin:auto;
+    background:#111;
+    padding:18px;
+    border:1px solid #242424;
+    border-radius:20px;
+}
+
+.spotify-box iframe{
+    width:100%;
+    min-height:352px;
+    border:0;
+    border-radius:14px;
+}
+
+/* =========================
+   CATALOG FILTER
+   ========================= */
+
+.filter-area{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.filter-btn{
+    border:1px solid #333;
+    background:#0d0d0d;
+    color:#aaa;
+    padding:10px 18px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background:#fff;
+    color:#000;
+}
+
+/* =========================
+   CATALOG GRID
+   ========================= */
+
+.catalog-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.product{
+    background:var(--card);
+    border:1px solid #222;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+    border-color:#555;
+}
+
+.product-art{
+    height:230px;
+    background:
+        radial-gradient(circle at 50% 40%,#444,#111 45%,#050505);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.product-art span{
+    font-size:45px;
+    font-weight:900;
+    letter-spacing:4px;
+    color:#fff;
+    opacity:.9;
+}
+
+.product-info{
+    padding:22px;
+}
+
+.genre{
+    font-size:11px;
+    color:#777;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.product h3{
+    font-size:24px;
+    margin:7px 0;
+}
+
+.product p{
+    color:#777;
+    font-size:14px;
+}
+
+.price-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:22px;
+}
+
+.price{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.buy-btn{
+    border:0;
+    background:#fff;
+    color:#000;
+    padding:10px 18px;
+    border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* =========================
+   SERVICES
+   ========================= */
+
+.services{
+    background:#080808;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.service{
+    border:1px solid #222;
+    padding:30px;
+    border-radius:18px;
+    background:#0e0e0e;
+    transition:.3s;
+}
+
+.service:hover{
+    transform:translateY(-5px);
+}
+
+.service-icon{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.service h3{
+    margin-bottom:8px;
+}
+
+.service p{
+    color:#777;
+    font-size:14px;
+}
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.about-big{
+    font-size:clamp(40px,6vw,75px);
+    line-height:.95;
+    font-weight:900;
+}
+
+.about-text{
+    color:#888;
+    font-size:17px;
+}
+
+.about-text strong{
+    color:#fff;
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact{
+    background:#080808;
+}
+
+.contact-box{
+    border:1px solid #222;
+    border-radius:25px;
+    padding:55px;
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+}
+
+.contact-box h2{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.contact-box p{
+    color:#777;
+    margin-bottom:30px;
+}
+
+.contact-links{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.contact-links a{
+    color:#fff;
+    text-decoration:none;
+    border:1px solid #333;
+    padding:12px 22px;
+    border-radius:30px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer{
+    padding:50px 7%;
+    border-top:1px solid #1c1c1c;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.footer-logo{
+    font-size:20px;
+    font-weight:900;
+    letter-spacing:3px;
+}
+
+footer p{
+    color:#666;
+    font-size:13px;
+}
+
+/* =========================
+   MODAL
+   ========================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(8px);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:3000;
+    padding:20px;
+}
+
+.modal-content{
+    max-width:500px;
+    width:100%;
+    background:#111;
+    border:1px solid #333;
+    border-radius:20px;
+    padding:35px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:25px;
+    cursor:pointer;
+    color:#aaa;
+}
+
+.modal-content h2{
+    margin-bottom:10px;
+}
+
+.modal-content p{
+    color:#888;
+    margin-bottom:20px;
+}
+
+.pay-btn{
+    width:100%;
+    padding:15px;
+    border:0;
+    border-radius:30px;
+    background:#fff;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media(max-width:950px){
+
+    .catalog-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+}
+
+@media(max-width:700px){
+
+    .navbar{
+        padding:0 5%;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:75px;
+        left:0;
+        width:100%;
+        background:#080808;
+        flex-direction:column;
+        padding:25px;
+        text-align:center;
+        border-bottom:1px solid #222;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    section{
+        padding:80px 5%;
+    }
+
+    .catalog-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-box{
+        padding:35px 20px;
+    }
+
+    footer{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     LOADER
+     ========================= -->
+
+<div class="loader" id="loader">
+    <div class="loader-logo">AM24</div>
+</div>
+
+
+<!-- =========================
+     NAVIGATION
+     ========================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        AM24 <span>HOUSE MUSIC</span>
+    </div>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#music">MUSIC</a></li>
+        <li><a href="#catalog">CATALOG</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+
+    </ul>
+
+</header>
+
+
+<!-- =========================
+     HERO
+     ========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            AM24 ORIGINAL
+        </div>
+
+        <h1>
+            HOUSE
+            <span>MUSIC.</span>
+        </h1>
+
+        <p>
+            Original music, beats and professional production
+            by AM24. Explore the catalog and discover your sound.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#catalog" class="btn btn-white">
+                EXPLORE CATALOG
+            </a>
+
+            <a href="#music" class="btn btn-dark">
+                LISTEN MUSIC
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURED MUSIC
+     ========================= -->
+
+<section class="featured" id="music">
+
+    <div class="section-title">
+
+        <div class="section-label">
+            FEATURED RELEASE
+        </div>
+
+        <h2>Out of Mind</h2>
+
+        <p>
+            Listen to AM24 on Spotify.
+        </p>
+
+    </div>
+
+    <div class="spotify-box">
+
+        <!-- Spotify Album Embed -->
+
+        <iframe
+            src="https://open.spotify.com/embed/album/1pyh8hx4BCBmA9FnhCmZhg?utm_source=generator"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CATALOG
+     ========================= -->
+
+<section id="catalog">
+
+    <div class="section-title">
+
+        <div class="section-label">
+            AM24 MUSIC STORE
+        </div>
+
+        <h2>Catalog</h2>
+
+        <p>
+            Explore beats and production across different genres.
+            Prices shown are starting prices and can be changed anytime.
+        </p>
+
+    </div>
+
+
+    <!-- FILTER -->
+
+    <div class="filter-area">
+
+        <button class="filter-btn active"
+        onclick="filterProducts('all',this)">
+        ALL
+        </button>
+
+        <button class="filter-btn"
+        onclick="filterProducts('deep-house',this)">
+        DEEP HOUSE
+        </button>
+
+        <button class="filter-btn"
+        onclick="filterProducts('drill',this)">
+        DRILL
+        </button>
+
+        <button class="filter-btn"
+        onclick="filterProducts('reggaeton',this)">
+        REGGAETON
+        </button>
+
+        <button class="filter-btn"
+        onclick="filterProducts('trap',this)">
+        TRAP
+        </button>
+
+        <button class="filter-btn"
+        onclick="filterProducts('hiphop',this)">
+        HIP-HOP
+        </button>
+
+        <button class="filter-btn"
+        onclick="filterProducts('afro-house',this)">
+        AFRO HOUSE
+        </button>
+
+        <button class="filter-btn"
+        onclick="filterProducts('house',this)">
+        HOUSE
+        </button>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+
+    <div class="catalog-grid">
+
+
+        <!-- DEEP HOUSE -->
+
+        <div class="product" data-genre="deep-house">
+
+            <div class="product-art">
+                <span>DH</span>
+            </div>
+
+            <div class="product-info">
+
+                <div class="genre">DEEP HOUSE</div>
+
+                <h3>Deep House Beat</h3>
+
+                <p>
+                    Dark, atmospheric and groove-focused
+                    deep house production.
+                </p>
+
+                <div class="price-row">
+
+                    <div class="price">
+                        ₹999
+                    </div>
+
+                    <button class="buy-btn"
+                    onclick="openBuy('Deep House Beat','₹999')">
+                        BUY
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- DRILL -->
+
+        <div class="product" data-genre="drill">
+
+            <div class="product-art">
+                <span>DRILL</span>
+            </div>
+
+            <div class="product-info">
+
+                <div class="genre">DRILL</div>
+
+                <h3>Drill Beat</h3>
+
+                <p>
+                    Dark 808s, sliding bass and modern
+                    drill bounce.
+                </p>
+
+                <div class="price-row">
+
+                    <div class="price">
+                        ₹799
+                    </div>
+
+                    <button class="buy-btn"
+                    onclick="openBuy('Drill Beat','₹799')">
+                        BUY
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- REGGAETON -->
+
+        <div class="product" data-genre="reggaeton">
+
+            <div class="product-art">
+                <span>REGGA</span>
+            </div>
+
+            <div class="product-info">
+
+                <div class="genre">REGGAETON</div>
+
+                <h3>Reggaeton Beat</h3>
+
+                <p>
+                    Modern Latin rhythm with commercial
+                    club energy.
+                </p>
+
+                <div class="price-row">
+
+                    <div class="price">
+                        ₹899
+                    </div>
+
+                    <button class="buy-btn"
+                    onclick="openBuy('Reggaeton Beat','₹899')">
+                        BUY
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TRAP -->
+
+        <div class="product" data-genre="trap">
+
+            <div class="product-art">
+                <span>TRAP</span>
+            </div>
+
+            <div class="product-info">
+
+                <div class="genre">TRAP</div>
+
+                <h3>Trap Beat</h3>
+
+                <p>
+                    Heavy 808s, punchy drums and
+                    modern trap atmosphere.
+                </p>
+
+                <div class="price-row">
+
+                    <div class="price">
+                        ₹799
+                    </div>
+
+                    <button class="buy-btn"
+                    onclick="openBuy('Trap Beat','₹799')">
+                        BUY
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HIP HOP -->
+
+        <div class="product" data-genre="hiphop">
+
+            <div class="product-art">
+                <span>HIP</span>
+            </div>
+
+            <div class="product-info">
+
+                <div class="genre">HIP-HOP / RAP</div>
+
+                <h3>Rap Beat</h3>
+
+                <p>
+                    Bounce-focused hip-hop production
+                    designed for rappers.
+                </p>
+
+                <div class="price-row">
+
+                    <div class="price">
+                        ₹799
+                    </div>
+
+                    <button class="buy-btn"
+                    onclick="openBuy('Rap Beat','₹799')">
+                        BUY
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- AFRO HOUSE -->
+
+        <div class="product" data-genre="afro-house">
+
+            <div class="product-art">
+                <span>AFRO</span>
+            </div>
+
+            <div class="product-info">
+
+                <div class="genre">AFRO HOUSE</div>
+
+                <h3>Afro House Beat</h3>
+
+                <p>
+                    Percussion-driven electronic groove
+                    with deep club energy.
+                </p>
+
+                <div class="price-row">
+
+                    <div class="price">
+                        ₹999
+                    </div>
+
+                    <button class="buy-btn"
+                    onclick="openBuy('Afro House Beat','₹999')">
+                        BUY
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HOUSE -->
+
+        <div class="product" data-genre="house">
+
+            <div class="product-art">
+                <span>HOUSE</span>
+            </div>
+
+            <div class="product-info">
+
+                <div class="genre">HOUSE</div>
+
+                <h3>House Beat</h3>
+
+                <p>
+                    Clean club-ready house groove
+                    for artists and creators.
+                </p>
+
+                <div class="price-row">
+
+                    <div class="price">
+                        ₹899
+                    </div>
+
+                    <button class="buy-btn"
+                    onclick="openBuy('House Beat','₹899')">
+                        BUY
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CUSTOM -->
+
+        <div class="product" data-genre="all">
+
+            <div class="product-art">
+                <span>AM24</span>
+            </div>
+
+            <div class="product-info">
+
+                <div class="genre">CUSTOM PRODUCTION</div>
+
+                <h3>Custom Music Production</h3>
+
+                <p>
+                    Custom production, composition,
+                    mixing and mastering.
+                </p>
+
+                <div class="price-row">
+
+                    <div class="price">
+                        ₹2,999+
+                    </div>
+
+                    <button class="buy-btn"
+                    onclick="openBuy('Custom Music Production','₹2,999+')">
+                        ENQUIRE
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+     ========================= -->
+
+<section class="services" id="services">
+
+    <div class="section-title">
+
+        <div class="section-label">
+            WHAT AM24 OFFERS
+        </div>
+
+        <h2>Services</h2>
+
+    </div>
+
+
+    <div class="service-grid">
+
+
+        <div class="service">
+
+            <div class="service-icon">🎧</div>
+
+            <h3>Music Production</h3>
+
+            <p>
+                Original music production for artists,
+                singers and independent creators.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">🎤</div>
+
+            <h3>Vocal Production</h3>
+
+            <p>
+                Vocal recording, editing and production
+                for your songs.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">🎚️</div>
+
+            <h3>Mix & Master</h3>
+
+            <p>
+                Professional mixing and mastering
+                for streaming platforms.
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-icon">🔥</div>
+
+            <h3>Custom Beats</h3>
+
+            <p>
+                Custom beats designed around your
+                artist style and concept.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+     ========================= -->
+
+<section id="about">
+
+    <div class="about-grid">
+
+        <div>
+
+            <div class="section-label">
+                THE ARTIST
+            </div>
+
+            <div class="about-big">
+                AM24<br>
+                ORIGINAL.
+            </div>
+
+        </div>
+
+
+        <div class="about-text">
+
+            <p>
+
+                <strong>AM24</strong> is an independent
+                producer, singer, rapper, composer and
+                mix & mastering engineer.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                AM24 works across genres including
+                Deep House, Drill, Reggaeton, Hip-Hop,
+                House and other electronic and urban
+                sounds.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                AM24 HOUSE MUSIC is the home for
+                original music, beats and production.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+     ========================= -->
+
+<section class="contact" id="contact">
+
+    <div class="contact-box">
+
+        <div class="section-label">
+            GET IN TOUCH
+        </div>
+
+        <h2>Let's Make Music.</h2>
+
+        <p>
+            For music production, beats, collaborations,
+            mixing, mastering or business enquiries.
+        </p>
+
+
+        <div class="contact-links">
+
+            <a href="mailto:tmusik197@gmail.com">
+                EMAIL AM24
+            </a>
+
+            <a href="https://instagram.com/_am24_og"
+               target="_blank">
+                INSTAGRAM
+            </a>
+
+            <a href="https://open.spotify.com/album/1pyh8hx4BCBmA9FnhCmZhg?si=fyWT2BiSQLK_pvHytC-9RQ"
+               target="_blank">
+                SPOTIFY
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+     ========================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        AM24 HOUSE MUSIC
+    </div>
+
+    <p>
+        © 2014 AM24 HOUSE MUSIC. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- =========================
+     BUY MODAL
+     ========================= -->
+
+<div class="modal" id="buyModal">
+
+    <div class="modal-content">
+
+        <div class="close" onclick="closeBuy()">
+            ×
+        </div>
+
+        <div class="section-label">
+            AM24 MUSIC STORE
+        </div>
+
+        <h2 id="buyTitle">
+            Product
+        </h2>
+
+        <p id="buyPrice">
+            Price
+        </p>
+
+        <p>
+            Payment system will be connected here.
+            After Paytm integration, customers will
+            be able to purchase the selected product.
+        </p>
+
+        <button class="pay-btn"
+        onclick="contactForPurchase()">
+            CONTACT AM24 TO BUY
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   LOADER
+   ========================= */
+
+window.addEventListener("load", function(){
+
+    setTimeout(function(){
+
+        document.getElementById("loader").style.opacity="0";
+
+        setTimeout(function(){
+            document.getElementById("loader").style.display="none";
+        },600);
+
+    },700);
+
+});
+
+
+/* =========================
+   MOBILE MENU
+   ========================= */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList.toggle("show");
+
+}
+
+
+/* =========================
+   CATALOG FILTER
+   ========================= */
+
+function filterProducts(category,button){
+
+    let products =
+    document.querySelectorAll(".product");
+
+    let buttons =
+    document.querySelectorAll(".filter-btn");
+
+    buttons.forEach(function(btn){
+        btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+
+    products.forEach(function(product){
+
+        let genre =
+        product.getAttribute("data-genre");
+
+        if(category === "all" || genre === category){
+
+            product.style.display="block";
+
+        }else{
+
+            product.style.display="none";
+
+        }
+
+    });
+
+}
+
+
+/* =========================
+   BUY MODAL
+   ========================= */
+
+function openBuy(title,price){
+
+    document.getElementById("buyTitle").innerText=title;
+
+    document.getElementById("buyPrice").innerText=
+    "Starting Price: " + price;
+
+    document.getElementById("buyModal").style.display="flex";
+
+}
+
+
+function closeBuy(){
+
+    document.getElementById("buyModal").style.display="none";
+
+}
+
+
+function contactForPurchase(){
+
+    let title =
+    document.getElementById("buyTitle").innerText;
+
+    let email =
+    "mailto:tmusik197@gmail.com"
+    + "?subject=AM24 Music Purchase - "
+    + encodeURIComponent(title);
+
+    window.location.href=email;
+
+}
+
+
+/* =========================
+   CLOSE MODAL ON OUTSIDE CLICK
+   ========================= */
+
+window.addEventListener("click",function(event){
+
+    let modal =
+    document.getElementById("buyModal");
+
+    if(event.target === modal){
+
+        closeBuy();
+
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>
